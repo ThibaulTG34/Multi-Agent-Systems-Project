@@ -1,1 +1,1 @@
-# SMAviong
+# Multi Agent Systems Project
