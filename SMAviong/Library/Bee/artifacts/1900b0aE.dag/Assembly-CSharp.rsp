@@ -473,7 +473,11 @@
 "Assets/Modern UI Pack/Scripts/Window/WindowManagerEditor.cs"
 "Assets/Scripts/CylinderCollderEditor.cs"
 "Assets/Scripts/CylinderCollider.cs"
+"Assets/Scripts/MathUtilities.cs"
 "Assets/Scripts/Move.cs"
+"Assets/Scripts/PlaneBehaviour.cs"
+"Assets/Scripts/RandomPlane.cs"
+"Assets/Scripts/spawnTrajectory.cs"
 -langversion:9.0
 
 /deterministic

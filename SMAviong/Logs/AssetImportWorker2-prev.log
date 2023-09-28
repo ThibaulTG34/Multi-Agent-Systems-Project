@@ -1,0 +1,775 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.9f1 (ea401c316338) revision 15351836'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'fr' Physical Memory: 32472 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/adrie/Desktop/sma/Multi-Agent-Systems-Project/SMAviong
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+50738
+Successfully changed project path to: C:/Users/adrie/Desktop/sma/Multi-Agent-Systems-Project/SMAviong
+C:/Users/adrie/Desktop/sma/Multi-Agent-Systems-Project/SMAviong
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [1728] Host "[IP] 192.168.209.1 [Port] 0 [Flags] 2 [Guid] 3182472413 [EditorId] 3182472413 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-T6B486E) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [1728] Host "[IP] 192.168.209.1 [Port] 0 [Flags] 2 [Guid] 3182472413 [EditorId] 3182472413 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-T6B486E) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
+Refreshing native plugins compatible for Editor in 8.00 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.9f1 (ea401c316338)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/adrie/Desktop/sma/Multi-Agent-Systems-Project/SMAviong/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6023 MB
+    Driver:   30.0.15.1181
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56060
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.011563 seconds.
+- Loaded All Assemblies, in  0.925 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 588 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.395 seconds
+Domain Reload Profiling: 2319ms
+	BeginReloadAssembly (173ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (66ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (107ms)
+	LoadAllAssembliesAndSetupDomain (557ms)
+		LoadAssemblies (172ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (552ms)
+			TypeCache.Refresh (547ms)
+				TypeCache.ScanAssembly (498ms)
+			ScanForSourceGeneratedMonoScriptInfo (2ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1396ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1244ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (868ms)
+			SetLoadedEditorAssemblies (10ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (235ms)
+			ProcessInitializeOnLoadMethodAttributes (126ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  2.485 seconds
+Refreshing native plugins compatible for Editor in 5.51 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.454 seconds
+Domain Reload Profiling: 3933ms
+	BeginReloadAssembly (384ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (49ms)
+	RebuildCommonClasses (57ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (74ms)
+	LoadAllAssembliesAndSetupDomain (1943ms)
+		LoadAssemblies (1180ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (994ms)
+			TypeCache.Refresh (929ms)
+				TypeCache.ScanAssembly (854ms)
+			ScanForSourceGeneratedMonoScriptInfo (47ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1455ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1027ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (52ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (203ms)
+			ProcessInitializeOnLoadAttributes (618ms)
+			ProcessInitializeOnLoadMethodAttributes (134ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 9.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5155 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 65 unused Assets / (347.7 KB). Loaded Objects now: 5616.
+Memory consumption went from 206.8 MB to 206.4 MB.
+Total: 13.119800 ms (FindLiveObjects: 1.237700 ms CreateObjectMapping: 0.838100 ms MarkObjects: 10.138600 ms  DeleteObjects: 0.901900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3824.211195 seconds.
+  path: Assets/Modern UI Pack/Prefabs/Animated Icon/Hamburger Menu.prefab
+  artifactKey: Guid(9d9a13fa5e868ce48a2d74278d1cf21c) Importer(2089858483,3d70f49cd1c2eb9ae422958d1c652c6b)
+Start importing Assets/Modern UI Pack/Prefabs/Animated Icon/Hamburger Menu.prefab using Guid(9d9a13fa5e868ce48a2d74278d1cf21c) Importer(2089858483,3d70f49cd1c2eb9ae422958d1c652c6b) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '66d01f7eef0da7c7d0abb9bfc10586d9') in 1.002123 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 53
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/Azure[Sky] Dynamic Skybox/Editor
+  artifactKey: Guid(cde004f769e15554c940cc33a723e770) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Azure[Sky] Dynamic Skybox/Editor using Guid(cde004f769e15554c940cc33a723e770) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ed19726bf3d5d00a3703d78af522cc88') in 0.530718 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Azure[Sky] Dynamic Skybox/Scripts/AzureEffectsController.cs
+  artifactKey: Guid(2d6338c2755b1144dbd70d2069374a45) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Azure[Sky] Dynamic Skybox/Scripts/AzureEffectsController.cs using Guid(2d6338c2755b1144dbd70d2069374a45) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '500b6a9465ead97ea3adca4b8538b937') in 0.075839 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Azure[Sky] Dynamic Skybox/Scenes/GI
+  artifactKey: Guid(a0ac4dcabecffe1458f8291f2565fc0d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Azure[Sky] Dynamic Skybox/Scenes/GI using Guid(a0ac4dcabecffe1458f8291f2565fc0d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a86b97c9fca52ff57a7a42c673a04e34') in 0.026598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Azure[Sky] Dynamic Skybox/Scenes/Override Properties By Scripting/Scene.unity
+  artifactKey: Guid(7e57c702bfa9bca4c81ee581513ff903) Importer(2089858483,3d70f49cd1c2eb9ae422958d1c652c6b)
+Start importing Assets/Azure[Sky] Dynamic Skybox/Scenes/Override Properties By Scripting/Scene.unity using Guid(7e57c702bfa9bca4c81ee581513ff903) Importer(2089858483,3d70f49cd1c2eb9ae422958d1c652c6b) Opening scene 'Assets/Azure[Sky] Dynamic Skybox/Scenes/Override Properties By Scripting/Scene.unity additively'
+Loaded scene 'Assets/Azure[Sky] Dynamic Skybox/Scenes/Override Properties By Scripting/Scene.unity'
+	Deserialize:            35.049 ms
+	Integration:            4495.708 ms
+	Integration of assets:  2.738 ms
+	Thread Wait Time:       0.079 ms
+	Total Operation Time:   4533.574 ms
+Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cbd217cb0b4aec2147d6acf98762943c') in 4.697344 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 124
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Azure[Sky] Dynamic Skybox/Scripts/AzureWeatherZone.cs
+  artifactKey: Guid(610c7e8085ce3c141bcd23abd487643a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Azure[Sky] Dynamic Skybox/Scripts/AzureWeatherZone.cs using Guid(610c7e8085ce3c141bcd23abd487643a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9ba47dc6c9bd1fcc0389a8a012c5253a') in 0.032883 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Modern UI Pack/Prefabs/Slider/Outline/Slider - Outline.prefab
+  artifactKey: Guid(01e954b9655b83945802d2c027d83d7e) Importer(2089858483,3d70f49cd1c2eb9ae422958d1c652c6b)
+Start importing Assets/Modern UI Pack/Prefabs/Slider/Outline/Slider - Outline.prefab using Guid(01e954b9655b83945802d2c027d83d7e) Importer(2089858483,3d70f49cd1c2eb9ae422958d1c652c6b) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f5da0b53cb1f86653dd5b2564c247404') in 0.199037 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 57
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Modern UI Pack/Prefabs/Dropdown/Multi Select Dropdown Item.prefab
+  artifactKey: Guid(089e7d3548a737b4a9f7c2d73ffd94e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Prefabs/Dropdown/Multi Select Dropdown Item.prefab using Guid(089e7d3548a737b4a9f7c2d73ffd94e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd8a2fafe798b79e5c9e41fd1643c4ecb') in 0.262127 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 51
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Modern UI Pack/Prefabs/Spinner/Spinner - Radial Trapez.prefab
+  artifactKey: Guid(068b998f6ba513f4e8ce1f3a50ab16ee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Prefabs/Spinner/Spinner - Radial Trapez.prefab using Guid(068b998f6ba513f4e8ce1f3a50ab16ee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '567c88ea69f3396c60a140fd13b77fd6') in 0.136816 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 52
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Modern UI Pack/Textures/Border/Radial/512px/Radial Outline 512px - 1x.png
+  artifactKey: Guid(2194d5d635e5bfb41ad25700190e5564) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Border/Radial/512px/Radial Outline 512px - 1x.png using Guid(2194d5d635e5bfb41ad25700190e5564) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2a41375229d84b3060dcc74ee2f5e8d9') in 0.201157 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Azure[Sky] Dynamic Skybox/Profiles/Fogness 2.asset
+  artifactKey: Guid(3234c136afdea324e81117c8bd05af9b) Importer(2089858483,3d70f49cd1c2eb9ae422958d1c652c6b)
+Start importing Assets/Azure[Sky] Dynamic Skybox/Profiles/Fogness 2.asset using Guid(3234c136afdea324e81117c8bd05af9b) Importer(2089858483,3d70f49cd1c2eb9ae422958d1c652c6b) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2ca01377b195a23af949bd8a201c2535') in 0.029422 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.072212 seconds.
+  path: Assets/Modern UI Pack/Animations/Button/Outline Button.controller
+  artifactKey: Guid(2fa2e87466111d248a120d5382f354fc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Animations/Button/Outline Button.controller using Guid(2fa2e87466111d248a120d5382f354fc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '538a5b05f2f4ece2f8342df609dc17e0') in 0.080159 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Modern UI Pack/Animations/Context Menu/Context Menu.controller
+  artifactKey: Guid(99aa38e45187c2043be381107c9859ca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Animations/Context Menu/Context Menu.controller using Guid(99aa38e45187c2043be381107c9859ca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd2ef641df0282a9ba74e8f02c6eb331f') in 0.055443 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Modern UI Pack/Textures/Border/Radial/64px/Radial Outline 64px - 9x.png
+  artifactKey: Guid(e80495990be36ff45a28a4c1e13ffca8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Border/Radial/64px/Radial Outline 64px - 9x.png using Guid(e80495990be36ff45a28a4c1e13ffca8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b22a2443c31e4b0ddca1622d84fbd339') in 0.115306 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Modern UI Pack/Textures/Icon/Reward/Trophy Filled.png
+  artifactKey: Guid(e204a8e438cd52f48b1fdea1c46d4c3b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Icon/Reward/Trophy Filled.png using Guid(e204a8e438cd52f48b1fdea1c46d4c3b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c281f4f7dfe632261b5e664f53ec408b') in 0.112841 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Modern UI Pack/Textures/Icon/Common/Star.png
+  artifactKey: Guid(c07549e02a2d55049906af989d15fe22) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Icon/Common/Star.png using Guid(c07549e02a2d55049906af989d15fe22) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0b444ceb21c28ce1d1c128c787f84342') in 0.098901 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Modern UI Pack/Scripts/Editor Handlers/MUIPEditorHandler.cs
+  artifactKey: Guid(0b3d37a8c2278a54380cde1dbb7524d9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Scripts/Editor Handlers/MUIPEditorHandler.cs using Guid(0b3d37a8c2278a54380cde1dbb7524d9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ad266ae8a24e95f5f06d44830c7587d9') in 0.048257 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/Modern UI Pack/Textures/Border/Radial/32px/Radial Outline 32px - 2x.png
+  artifactKey: Guid(0dba7f4bcc17ba64a8acc762f75a6050) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Border/Radial/32px/Radial Outline 32px - 2x.png using Guid(0dba7f4bcc17ba64a8acc762f75a6050) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2a96bd1307fc0e0faf14d7a054109360') in 0.151516 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Modern UI Pack/Textures/Icon/Device/Headphones.png
+  artifactKey: Guid(b72c64868a74dd04e9b605a346744fb5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Icon/Device/Headphones.png using Guid(b72c64868a74dd04e9b605a346744fb5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9997d8633521aa63243adcfda2421494') in 0.104240 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Modern UI Pack/Prefabs/Progress Bar/PB - Radial (Bold).prefab
+  artifactKey: Guid(3e86700be571c71468308b117b38eed2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Prefabs/Progress Bar/PB - Radial (Bold).prefab using Guid(3e86700be571c71468308b117b38eed2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2af63b2a88964407ae5171631271b312') in 0.235672 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 52
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/Modern UI Pack/Textures/Border/Radial/1024px/Radial Outline 1024px - 10x.png
+  artifactKey: Guid(0ecdb2af8ed8f904eacbb8cb7e83603b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Border/Radial/1024px/Radial Outline 1024px - 10x.png using Guid(0ecdb2af8ed8f904eacbb8cb7e83603b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3e7b8ce4c08806aa20d7dcb72ea9b987') in 0.143516 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Modern UI Pack/Editor/Scripts
+  artifactKey: Guid(7a14668655085e9459f11083aedafb02) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Editor/Scripts using Guid(7a14668655085e9459f11083aedafb02) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f824a8d3f48493c4ec0ba6697ffe7962') in 0.051010 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Modern UI Pack/Resources/MUIP Manager.asset
+  artifactKey: Guid(2a619a9609984be49b53b928dd94e61b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Resources/MUIP Manager.asset using Guid(2a619a9609984be49b53b928dd94e61b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9aaa914ff83f532edb8af4340709eb0c') in 0.180497 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 31
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Modern UI Pack/Animations/Animated Icon/Hamburger to Exit.controller
+  artifactKey: Guid(8fbd904fcef754c42a660cf62725045a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Animations/Animated Icon/Hamburger to Exit.controller using Guid(8fbd904fcef754c42a660cf62725045a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6b268aff5a57f978a3dbb03e515204c1') in 0.036472 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Modern UI Pack/Textures/Icon/Common/Eye.png
+  artifactKey: Guid(e07717fc47a510742ac0b11da205b050) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Icon/Common/Eye.png using Guid(e07717fc47a510742ac0b11da205b050) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '62397e0d03d40574ffd850b42c3db69c') in 0.083788 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Modern UI Pack/Textures/Icon/Navigation/Search.png
+  artifactKey: Guid(6d669c2082983644b9d4a34c0b22b1e4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Icon/Navigation/Search.png using Guid(6d669c2082983644b9d4a34c0b22b1e4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4c0231594a6c38eb6f722627b115c6b9') in 0.097420 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Modern UI Pack/Prefabs/Button/Rounded - Gradient/Orange.prefab
+  artifactKey: Guid(8222189fe1aca524dab7270e7e9b7745) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Prefabs/Button/Rounded - Gradient/Orange.prefab using Guid(8222189fe1aca524dab7270e7e9b7745) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '359d50f6f06763638c2f5d05a30d695a') in 0.213190 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 112
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Modern UI Pack/Scripts/Rendering/UIGradientEditor.cs
+  artifactKey: Guid(f37cb8af34d443a4d8447ecddc64f5af) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Scripts/Rendering/UIGradientEditor.cs using Guid(f37cb8af34d443a4d8447ecddc64f5af) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cd062adeb42865e5c1351271f3c48bb0') in 0.043456 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Modern UI Pack/Scripts/Core
+  artifactKey: Guid(363a9fdea62181342b3ad1b7419f1420) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Scripts/Core using Guid(363a9fdea62181342b3ad1b7419f1420) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6a2f68ffd3ef88630bdd717ea465bd1c') in 0.029645 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Modern UI Pack/Animations/Animated Icon/Heart Pop.controller
+  artifactKey: Guid(71330a5645a0c9c4e8ed687be8e6ad97) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Animations/Animated Icon/Heart Pop.controller using Guid(71330a5645a0c9c4e8ed687be8e6ad97) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '52181f9787355ebf773dd38b771eb531') in 0.052020 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Modern UI Pack/Animations/Demo/Button/Gradient Pulse.controller
+  artifactKey: Guid(e9d2ae032f57d98438cb299dc4ee0c24) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Animations/Demo/Button/Gradient Pulse.controller using Guid(e9d2ae032f57d98438cb299dc4ee0c24) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '80bcaa864b7b971d4a856372bd993320') in 0.027204 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Modern UI Pack/Animations/Progress Bar/Standard Fastly.controller
+  artifactKey: Guid(2ccd99e965d83bf4d9355701fd7f868f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Animations/Progress Bar/Standard Fastly.controller using Guid(2ccd99e965d83bf4d9355701fd7f868f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd2aaea8b9432ac2013f774a6dcd39e85') in 0.028590 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Modern UI Pack/Scripts/Input Field
+  artifactKey: Guid(ca95fe39461d3be48b5e7c489913b16f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Scripts/Input Field using Guid(ca95fe39461d3be48b5e7c489913b16f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3ade7551f08edad570cb0887118b2620') in 0.028803 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Modern UI Pack/Animations/Animated Icon/Sand Clock Change.anim
+  artifactKey: Guid(a145cdfc5a338cd44a01e436aeecc113) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Animations/Animated Icon/Sand Clock Change.anim using Guid(a145cdfc5a338cd44a01e436aeecc113) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '81fbaa925f0902abcc721c5e47506e02') in 0.037827 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Modern UI Pack/Animations/Notifications
+  artifactKey: Guid(ae22ceae1a4adf54cb85040dc1c02cdb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Animations/Notifications using Guid(ae22ceae1a4adf54cb85040dc1c02cdb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3b663ba59f0607af09a5985ecffbe0e8') in 0.025986 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 3x.png
+  artifactKey: Guid(27536c42af1eafc40bef676b3fb7422b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Border/Rounded/128px/Rounded Outline 128px - 3x.png using Guid(27536c42af1eafc40bef676b3fb7422b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '300f30f4136c58dce1b7fd0c436463e6') in 0.086600 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Modern UI Pack/Fonts/OpenSans-LightItalic SDF.asset
+  artifactKey: Guid(d10d3fbe67cb68d41930a013bc4e2e43) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Fonts/OpenSans-LightItalic SDF.asset using Guid(d10d3fbe67cb68d41930a013bc4e2e43) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cd4987057acf0ea761036a57fa522bda') in 0.148364 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Modern UI Pack/Textures/Border/Rounded/1024px/Rounded Outline 1024px - 8x.png
+  artifactKey: Guid(ac2fc50e031e7244c88e84c77ffc0056) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Border/Rounded/1024px/Rounded Outline 1024px - 8x.png using Guid(ac2fc50e031e7244c88e84c77ffc0056) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fea28407da2d77669fd2a830ec26172f') in 0.101446 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Modern UI Pack/Textures/Icon/Others/Expand.png
+  artifactKey: Guid(8dcd5f373cd25944eb819fc6795f9dfa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Icon/Others/Expand.png using Guid(8dcd5f373cd25944eb819fc6795f9dfa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '87aa7450a9d059c62c6965a68c9e4b16') in 0.074790 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Modern UI Pack/Scripts/Switch/SwitchManagerEditor.cs
+  artifactKey: Guid(64c43837553166847bd23a630a8ca39d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Scripts/Switch/SwitchManagerEditor.cs using Guid(64c43837553166847bd23a630a8ca39d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'efbb5167dfc8e205dd91dcbccb75c5c4') in 0.029460 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Modern UI Pack/Fonts/OpenSans-BoldItalic SDF.asset
+  artifactKey: Guid(b03b7a4c74cd6294ca732f49684716ee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Fonts/OpenSans-BoldItalic SDF.asset using Guid(b03b7a4c74cd6294ca732f49684716ee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b12e80815ca35af768c3d2dd1eaeb5fb') in 0.098370 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000094 seconds.
+  path: Assets/Modern UI Pack/Textures/Border/Flat/Square Filled.png
+  artifactKey: Guid(b325a13e94f3bac4199e75b91fa98449) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Border/Flat/Square Filled.png using Guid(b325a13e94f3bac4199e75b91fa98449) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7991144331bb7182c8909d29607fed12') in 0.080501 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Filled 512px.png
+  artifactKey: Guid(cca3ca807d25c1844b79eeb77e944d05) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Border/Rounded/512px/Rounded Filled 512px.png using Guid(cca3ca807d25c1844b79eeb77e944d05) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '81f5e903fb339c3f31b99aa7b18fb238') in 0.083899 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Modern UI Pack/Animations/Modal Window/Style 1/Standard.controller
+  artifactKey: Guid(210f0314d76a2d5468eaa5985d803332) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Animations/Modal Window/Style 1/Standard.controller using Guid(210f0314d76a2d5468eaa5985d803332) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0c01405998c741412101ab15098ba3d1') in 0.029425 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000092 seconds.
+  path: Assets/Modern UI Pack/Prefabs/Button/Basic - Gradient/Brown.prefab
+  artifactKey: Guid(0c865d3a9a1a18449b77fddeba3c0bff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Prefabs/Button/Basic - Gradient/Brown.prefab using Guid(0c865d3a9a1a18449b77fddeba3c0bff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2589a8069767a15bade6dac7e3a1aeaf') in 0.121208 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 113
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/Modern UI Pack/Prefabs/Button/Rounded - Gradient/Red.prefab
+  artifactKey: Guid(c0df0988b9b069b4b82e51ff1f75737b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Prefabs/Button/Rounded - Gradient/Red.prefab using Guid(c0df0988b9b069b4b82e51ff1f75737b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '862429b38ab825d5e0f546d0eb255878') in 0.109640 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 112
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Modern UI Pack/Animations/Animated Icon/Load Out.anim
+  artifactKey: Guid(5499e66841436ff4c82b7fccd6b8f696) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Animations/Animated Icon/Load Out.anim using Guid(5499e66841436ff4c82b7fccd6b8f696) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ebf30e0056f85fbf81f0cefa1fb53221') in 0.026692 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Modern UI Pack/Animations/Progress Bar/Circle Pie.controller
+  artifactKey: Guid(671d36c09c7e9d043bf995530c38c3c8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Animations/Progress Bar/Circle Pie.controller using Guid(671d36c09c7e9d043bf995530c38c3c8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6ff4f2c7543fffd1ab423aec5aaa17ac') in 0.025960 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Modern UI Pack/Scripts/Icon/IconManager.cs
+  artifactKey: Guid(603d9687b95941549aee6d293dae7de4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Scripts/Icon/IconManager.cs using Guid(603d9687b95941549aee6d293dae7de4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b17ed592ac354508e4a46c5c905a0529') in 0.033615 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Modern UI Pack/Prefabs/Button/Rounded/Brown.prefab
+  artifactKey: Guid(e8e9fe43b467bcf46a644b9efa5c8fad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Prefabs/Button/Rounded/Brown.prefab using Guid(e8e9fe43b467bcf46a644b9efa5c8fad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '613a9f9b22b48c141e326487086520b8') in 0.114398 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 109
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Modern UI Pack/Textures/Icon/UI Elements/Window Manager.png
+  artifactKey: Guid(963c222ecbbd16f41aad4a3fc3a42c5e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Icon/UI Elements/Window Manager.png using Guid(963c222ecbbd16f41aad4a3fc3a42c5e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c12246ea0c57dabb77cdca361589bfaf') in 0.070125 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Modern UI Pack/Fonts/OpenSans-Bold SDF.asset
+  artifactKey: Guid(fa328c1ae3ffb6b4583cf371153b0be6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Fonts/OpenSans-Bold SDF.asset using Guid(fa328c1ae3ffb6b4583cf371153b0be6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0c803b93f0fda12612fd226537cfcf80') in 0.099257 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Free Stylized Skybox/CubeMap/Textures/Sky_Anime_15_Day_a.png
+  artifactKey: Guid(fca5a57d63136f6428a1d31d1ab2c777) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Free Stylized Skybox/CubeMap/Textures/Sky_Anime_15_Day_a.png using Guid(fca5a57d63136f6428a1d31d1ab2c777) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '35e54e789cd962f9b2b12f8f3b864ac3') in 0.607185 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Assets/Materials/cockpit.mat
+  artifactKey: Guid(5ce8537467105e64bb794ed667915f75) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Materials/cockpit.mat using Guid(5ce8537467105e64bb794ed667915f75) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ba7af3f96db9e68f9e00b3b5e7640d92') in 0.134011 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Free Stylized Skybox/Panoramic/Textures/Sky_LowPoly_01_Day_a.png
+  artifactKey: Guid(b3453e84aa7d88a47a6b80b04864177c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Free Stylized Skybox/Panoramic/Textures/Sky_LowPoly_01_Day_a.png using Guid(b3453e84aa7d88a47a6b80b04864177c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e72ac862421d743a9791a875ddaf9122') in 0.358830 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Modern UI Pack/Textures/Icon/Business & Commerce/Pie Chart.png
+  artifactKey: Guid(50468c85a5e6a904d966861b80e1cda9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Icon/Business & Commerce/Pie Chart.png using Guid(50468c85a5e6a904d966861b80e1cda9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6815b081e43a58a435fbf57a599368e6') in 0.129476 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Modern UI Pack/Textures/Icon/Web & Cloud/Cloud Upload Filled.png
+  artifactKey: Guid(e2c71ef013ffbe843aa024e756ff4dec) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Textures/Icon/Web & Cloud/Cloud Upload Filled.png using Guid(e2c71ef013ffbe843aa024e756ff4dec) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '475c0341f3a5cd4aa8541a3a691298d6') in 0.098403 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Modern UI Pack/Scripts/Slider/RangeSlider.cs
+  artifactKey: Guid(09bc67870d6e747c79794142c4f06f22) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Scripts/Slider/RangeSlider.cs using Guid(09bc67870d6e747c79794142c4f06f22) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '08df7b05ff3b1ec93d1ccc42169ff0db') in 0.070509 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Modern UI Pack/Editor/Icons/EditorListView.png
+  artifactKey: Guid(93f09189124b21e479fc891dbc1b93bf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Modern UI Pack/Editor/Icons/EditorListView.png using Guid(93f09189124b21e479fc891dbc1b93bf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9682b429efa306ebadb9d8f1a5b4d7ca') in 0.082427 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 6.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6 unused Assets / (292.4 KB). Loaded Objects now: 5633.
+Memory consumption went from 107.8 MB to 107.5 MB.
+Total: 11.044100 ms (FindLiveObjects: 1.344100 ms CreateObjectMapping: 0.893000 ms MarkObjects: 8.534700 ms  DeleteObjects: 0.269200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 15.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6 unused Assets / (297.3 KB). Loaded Objects now: 5632.
+Memory consumption went from 107.8 MB to 107.5 MB.
+Total: 17.166500 ms (FindLiveObjects: 1.307700 ms CreateObjectMapping: 0.811700 ms MarkObjects: 13.953000 ms  DeleteObjects: 1.089100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: a3ef5dd2817f97addfee359851a9dba5 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

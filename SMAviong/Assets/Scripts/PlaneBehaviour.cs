@@ -14,18 +14,61 @@ public class PlaneBehaviour : MonoBehaviour
     public Vector3 currentTargetPosition { get; private set; }
     public Vector3 speedDirectionnalVector;
     public List<Vector3> trajectory;
+    public float speed;
+
+    private int idxTraj = 0;
+
+    private bool contact = false;
 
     public List<Vector3> alternativeTrajectories; // Store alternative trajectories for dodging.
+
+    void Update()
+    {
+        float step = speed * Time.deltaTime;
+
+        // if(contact)
+        // {
+        //     float distance = Vector3.Distance(this.transform.position, alternativeTrajectories[idxTraj]);
+        //     if(distance < 10f)
+        //     {
+        //         idxTraj ++;
+        //     }
+        //     this.transform.position = Vector3.MoveTowards(this.transform.position, alternativeTrajectories[idxTraj], step);
+        // }
+        // else
+        // {
+            float distance = Vector3.Distance(this.transform.position, trajectory[idxTraj]);
+            if(distance < 10f && idxTraj != trajectory.Count-1)
+            {
+                idxTraj ++;
+            }
+            this.transform.position = Vector3.MoveTowards(this.transform.position, trajectory[idxTraj], step);
+            this.transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(this.transform.position, trajectory[idxTraj], 3, 0.0f));
+            this.transform.rotation *= Quaternion.Euler(0, 180, 0);
+        // }
+        
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         PlaneBehaviour otherPlane = other.GetComponent<PlaneBehaviour>();
         if (otherPlane != null) 
         {
+            contact = true;
             Vector3 dodgeDirection = CalculateDodgeDirection(otherPlane);
             AdjustTrajectory(dodgeDirection);
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        PlaneBehaviour otherPlane = other.GetComponent<PlaneBehaviour>();
+        if (otherPlane != null) 
+        {
+            contact = false;
+        }
+    }
+
 
     private Vector3 CalculateDodgeDirection(PlaneBehaviour otherPlane)
     {
