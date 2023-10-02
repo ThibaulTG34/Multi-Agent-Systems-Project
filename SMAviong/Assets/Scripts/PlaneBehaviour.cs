@@ -17,42 +17,65 @@ public class PlaneBehaviour : MonoBehaviour
     public float speed;
 
     private int idxTraj = 0;
-
     private bool contact = false;
+    public List<Vector3> alternativeTrajectories;
 
-    public List<Vector3> alternativeTrajectories; // Store alternative trajectories for dodging.
+    void Start()
+    {
+        alternativeTrajectories = new List<Vector3>(trajectory);
+    }
 
     void Update()
     {
         float step = speed * Time.deltaTime;
 
-        // if(contact)
-        // {
-        //     float distance = Vector3.Distance(this.transform.position, alternativeTrajectories[idxTraj]);
-        //     if(distance < 10f)
-        //     {
-        //         idxTraj ++;
-        //     }
-        //     this.transform.position = Vector3.MoveTowards(this.transform.position, alternativeTrajectories[idxTraj], step);
-        // }
-        // else
-        // {
-            float distance = Vector3.Distance(this.transform.position, trajectory[idxTraj]);
-            if(distance < 10f && idxTraj != trajectory.Count-1)
-            {
-                idxTraj ++;
-            }
-            this.transform.position = Vector3.MoveTowards(this.transform.position, trajectory[idxTraj], step);
-            this.transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(this.transform.position, trajectory[idxTraj], 3, 0.0f));
+        Vector3 currentTarget;
+        if (contact)
+        {
+            currentTarget = (idxTraj < alternativeTrajectories.Count - 1) ? alternativeTrajectories[idxTraj] : alternativeTrajectories[alternativeTrajectories.Count - 1];
+        }
+        else
+        {
+            currentTarget = (idxTraj < trajectory.Count - 1) ? trajectory[idxTraj] : trajectory[trajectory.Count - 1];
+        }
+
+        float distance = Vector3.Distance(this.transform.position, currentTarget);
+        if (distance < 10f && idxTraj < Mathf.Min(trajectory.Count, alternativeTrajectories.Count) - 1)
+        {
+            idxTraj++;
+        }
+        this.transform.position = Vector3.MoveTowards(this.transform.position, currentTarget, step);
+
+        UpdateDirectionalVector();
+        RotatePlaneTowardsTarget(currentTarget);
+    }
+
+    private void UpdateDirectionalVector()
+    {
+        if (idxTraj > 0 && idxTraj < trajectory.Count)
+        {
+            speedDirectionnalVector = (trajectory[idxTraj] - trajectory[idxTraj - 1]).normalized;
+        }
+        else if (idxTraj == 0 && trajectory.Count > 1)
+        {
+            speedDirectionnalVector = (trajectory[1] - trajectory[0]).normalized;
+        }
+    }
+
+    private void RotatePlaneTowardsTarget(Vector3 target)
+    {
+        Vector3 direction = Vector3.RotateTowards(this.transform.position, target, 3, 0.0f);
+        if (direction != Vector3.zero)
+        {
+            this.transform.rotation = Quaternion.LookRotation(direction);
             this.transform.rotation *= Quaternion.Euler(0, 180, 0);
-        // }
-        
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         PlaneBehaviour otherPlane = other.GetComponent<PlaneBehaviour>();
-        if (otherPlane != null) 
+        if (otherPlane != null)
         {
             contact = true;
             Vector3 dodgeDirection = CalculateDodgeDirection(otherPlane);
@@ -63,19 +86,17 @@ public class PlaneBehaviour : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         PlaneBehaviour otherPlane = other.GetComponent<PlaneBehaviour>();
-        if (otherPlane != null) 
+        if (otherPlane != null)
         {
             contact = false;
+            idxTraj = Mathf.Min(trajectory.IndexOf(alternativeTrajectories[idxTraj]), trajectory.Count - 1);
         }
     }
 
-
     private Vector3 CalculateDodgeDirection(PlaneBehaviour otherPlane)
     {
-        // Here, you would run multiple simulations of potential dodges.
-        // For simplicity, we'll assume dodging left or right.
-        Vector3 dodgeLeft = Quaternion.Euler(0, -45, 0) * speedDirectionnalVector; // 45 degrees to the left.
-        Vector3 dodgeRight = Quaternion.Euler(0, 45, 0) * speedDirectionnalVector; // 45 degrees to the right.
+        Vector3 dodgeLeft = Quaternion.Euler(0, -90, 0) * speedDirectionnalVector;
+        Vector3 dodgeRight = Quaternion.Euler(0, 90, 0) * speedDirectionnalVector;
 
         float criticalityLeft = CalculcateCriticalityWithOtherAgent(currentPosition, currentTargetPosition, dodgeLeft, trajectory);
         float criticalityRight = CalculcateCriticalityWithOtherAgent(currentPosition, currentTargetPosition, dodgeRight, trajectory);
@@ -85,9 +106,14 @@ public class PlaneBehaviour : MonoBehaviour
 
     private void AdjustTrajectory(Vector3 dodgeDirection)
     {
-        alternativeTrajectories.Add(currentPosition + dodgeDirection); // add the dodge direction to the alternative trajectory.
+        alternativeTrajectories = new List<Vector3>(trajectory);
+        if (idxTraj + 1 < alternativeTrajectories.Count)
+        {
+            alternativeTrajectories[idxTraj + 1] = currentPosition + dodgeDirection * 10f;
+        }
         speedDirectionnalVector = dodgeDirection.normalized;
     }
+
 
     private float CalculateC3k(Vector3 positionNextStep)
     {

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3778514653836137854}
   - component: {fileID: 8361042164543071054}
   - component: {fileID: 2660506386811397619}
+  - component: {fileID: 1202280716108383968}
   m_Layer: 0
   m_Name: An225
   m_TagString: Untagged
@@ -136,8 +137,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 566.55383, y: 46.330112, z: 521.98456}
-  m_Center: {x: 0, y: 19.89342, z: 0}
+  m_Size: {x: 200, y: 200, z: 200}
+  m_Center: {x: 0, y: 20.590157, z: 0}
 --- !u!120 &2660506386811397619
 LineRenderer:
   serializedVersion: 2
@@ -242,3 +243,30 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!54 &1202280716108383968
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2954433801269012104}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
