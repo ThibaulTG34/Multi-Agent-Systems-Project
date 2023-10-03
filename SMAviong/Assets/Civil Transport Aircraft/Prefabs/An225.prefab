@@ -103,9 +103,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedDirectionnalVector: {x: 0, y: 0, z: 0}
   trajectory: []
-  speed: 100
+  speed: 50
   altTrajectoryLineRenderer: {fileID: 7284921230414550180}
   alternativeTrajectories: []
+  TimerContact: 0
+  TimerRunnig: 0
+  closestPlane: {fileID: 0}
 --- !u!114 &3778514653836137854
 MonoBehaviour:
   m_ObjectHideFlags: 0

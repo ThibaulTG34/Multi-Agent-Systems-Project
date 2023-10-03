@@ -21,6 +21,13 @@ public class PlaneBehaviour : MonoBehaviour
     private int idxTraj = 0;
     private bool contact = false;
     public List<Vector3> alternativeTrajectories;
+    public float TimerContact = 30f;
+    public bool TimerRunnig = false;
+
+    //public List<PlaneBehaviour> nearByPlanes;
+    public PlaneBehaviour closestPlane;
+    private float currentMaxCrit;
+
 
     void Start()
     {
@@ -37,6 +44,8 @@ public class PlaneBehaviour : MonoBehaviour
             // Optional: configure the LineRenderer here if needed (e.g., color, width, material, etc.)
             altTrajectoryLineRenderer.positionCount = 0; // Initially we do not draw any line
         }
+        
+        TimerContact = 0f;
     }
 
 
@@ -44,15 +53,26 @@ public class PlaneBehaviour : MonoBehaviour
     {
         float step = speed * Time.deltaTime;
 
-        Vector3 currentTarget;
+        Vector3 currentTarget = Vector3.zero;
+        //Debug.Log(TimerContact);
+
+        if (TimerRunnig)
+            TimerContact -= Time.deltaTime;
+
+        if (TimerContact <= 0)
+            TimerRunnig = false;
+
         if (contact)
         {
-            Debug.Log(idxTraj);
             currentTarget = (idxTraj < alternativeTrajectories.Count - 1) ? alternativeTrajectories[idxTraj] : alternativeTrajectories[alternativeTrajectories.Count - 1];
         }
+        else if (TimerContact > 0)
+        {
+            //Debug.Log("ici");
+            currentTarget = (idxTraj < alternativeTrajectories.Count - 1) ? alternativeTrajectories[idxTraj] : alternativeTrajectories[alternativeTrajectories.Count - 1];
+        } 
         else
         {
-            Debug.Log(idxTraj);
             currentTarget = (idxTraj < trajectory.Count - 1) ? trajectory[idxTraj] : trajectory[trajectory.Count - 1];
         }
 
@@ -114,8 +134,16 @@ public class PlaneBehaviour : MonoBehaviour
         if (otherPlane != null)
         {
             contact = true;
-            Vector3 dodgeDirection = CalculateDodgeDirection(otherPlane);
-            AdjustTrajectory(dodgeDirection);
+            TimerRunnig = true;
+            //TimerContact = 10f;
+            //nearByPlanes.Add(otherPlane);
+            Tuple<Vector3, float> res = CalculateDodgeDirection(otherPlane);
+            if(res.Item2 > currentMaxCrit)
+            {
+                currentMaxCrit = res.Item2;
+                AdjustTrajectory(res.Item1);
+                TimerContact = 30f;
+            }
         }
     }
 
@@ -124,19 +152,21 @@ public class PlaneBehaviour : MonoBehaviour
         PlaneBehaviour otherPlane = other.GetComponent<PlaneBehaviour>();
         if (otherPlane != null)
         {
+            //nearByPlanes.Remove(otherPlane);
             contact = false;
         }
     }
 
-    private Vector3 CalculateDodgeDirection(PlaneBehaviour otherPlane)
+    private Tuple<Vector3,float> CalculateDodgeDirection(PlaneBehaviour otherPlane)
     {
         Vector3 dodgeLeft = Quaternion.Euler(0, -90, 0) * speedDirectionnalVector;
         Vector3 dodgeRight = Quaternion.Euler(0, 90, 0) * speedDirectionnalVector;
 
         float criticalityLeft = CalculcateCriticalityWithOtherAgent(currentPosition, currentTargetPosition, dodgeLeft, trajectory);
         float criticalityRight = CalculcateCriticalityWithOtherAgent(currentPosition, currentTargetPosition, dodgeRight, trajectory);
+        float criticalityCoef = CalculcateCriticalityWithOtherAgent(currentPosition, currentTargetPosition, dodgeRight, trajectory);
 
-        return criticalityLeft < criticalityRight ? dodgeLeft : dodgeRight;
+        return new Tuple<Vector3,float> ((criticalityLeft < criticalityRight ? dodgeLeft : dodgeRight), criticalityCoef);
     }
 
     private void AdjustTrajectory(Vector3 dodgeDirection)
@@ -144,7 +174,7 @@ public class PlaneBehaviour : MonoBehaviour
         alternativeTrajectories = new List<Vector3>(trajectory);
         if (idxTraj + 1 < alternativeTrajectories.Count)
         {
-            alternativeTrajectories[idxTraj + 1] = currentPosition + dodgeDirection * 10f;
+            alternativeTrajectories[idxTraj + 1] = currentPosition + dodgeDirection * 150f;
         }
         speedDirectionnalVector = dodgeDirection.normalized;
     }
