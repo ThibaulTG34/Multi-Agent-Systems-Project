@@ -32,10 +32,12 @@ public class PlaneBehaviour : MonoBehaviour
         Vector3 currentTarget;
         if (contact)
         {
+            Debug.Log(idxTraj);
             currentTarget = (idxTraj < alternativeTrajectories.Count - 1) ? alternativeTrajectories[idxTraj] : alternativeTrajectories[alternativeTrajectories.Count - 1];
         }
         else
         {
+            Debug.Log(idxTraj);
             currentTarget = (idxTraj < trajectory.Count - 1) ? trajectory[idxTraj] : trajectory[trajectory.Count - 1];
         }
 
@@ -89,7 +91,6 @@ public class PlaneBehaviour : MonoBehaviour
         if (otherPlane != null)
         {
             contact = false;
-            idxTraj = Mathf.Min(trajectory.IndexOf(alternativeTrajectories[idxTraj]), trajectory.Count - 1);
         }
     }
 
