@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using System;
 
 public class PlaneBehaviour : MonoBehaviour
@@ -15,6 +16,7 @@ public class PlaneBehaviour : MonoBehaviour
     public Vector3 speedDirectionnalVector;
     public List<Vector3> trajectory;
     public float speed;
+    public LineRenderer altTrajectoryLineRenderer;
 
     private int idxTraj = 0;
     private bool contact = false;
@@ -23,7 +25,20 @@ public class PlaneBehaviour : MonoBehaviour
     void Start()
     {
         alternativeTrajectories = new List<Vector3>(trajectory);
+
+        // If the LineRenderer is not assigned through the inspector, try getting it from a child component
+        if (altTrajectoryLineRenderer == null)
+        {
+            altTrajectoryLineRenderer = GetComponentInChildren<LineRenderer>();
+        }
+
+        if (altTrajectoryLineRenderer != null)
+        {
+            // Optional: configure the LineRenderer here if needed (e.g., color, width, material, etc.)
+            altTrajectoryLineRenderer.positionCount = 0; // Initially we do not draw any line
+        }
     }
+
 
     void Update()
     {
@@ -48,6 +63,16 @@ public class PlaneBehaviour : MonoBehaviour
         }
         this.transform.position = Vector3.MoveTowards(this.transform.position, currentTarget, step);
 
+
+        if (contact)
+        {
+            DrawAlternativeTrajectory();
+        }
+        else if (altTrajectoryLineRenderer != null && altTrajectoryLineRenderer.positionCount > 0)
+        {
+            altTrajectoryLineRenderer.positionCount = 0;
+        }
+
         UpdateDirectionalVector();
         RotatePlaneTowardsTarget(currentTarget);
     }
@@ -61,6 +86,15 @@ public class PlaneBehaviour : MonoBehaviour
         else if (idxTraj == 0 && trajectory.Count > 1)
         {
             speedDirectionnalVector = (trajectory[1] - trajectory[0]).normalized;
+        }
+    }
+
+    private void DrawAlternativeTrajectory()
+    {
+        if (altTrajectoryLineRenderer != null && alternativeTrajectories != null && alternativeTrajectories.Count > 0)
+        {
+            altTrajectoryLineRenderer.positionCount = alternativeTrajectories.Count;
+            altTrajectoryLineRenderer.SetPositions(alternativeTrajectories.ToArray());
         }
     }
 
