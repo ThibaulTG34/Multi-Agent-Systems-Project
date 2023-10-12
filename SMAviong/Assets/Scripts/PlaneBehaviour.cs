@@ -21,7 +21,7 @@ public class PlaneBehaviour : MonoBehaviour
     private int idxTraj = 0;
     private bool contact = false;
     public List<Vector3> alternativeTrajectories;
-    public float TimerContact = 30f;
+    public float TimerContact = 10f;
     public bool TimerRunnig = false;
 
     //public List<PlaneBehaviour> nearByPlanes;
@@ -95,6 +95,11 @@ public class PlaneBehaviour : MonoBehaviour
 
         UpdateDirectionalVector();
         RotatePlaneTowardsTarget(currentTarget);
+
+        if(idxTraj == trajectory.Count -1)
+        {
+            GameObject.Destroy(this.gameObject);
+        }
     }
 
     private void UpdateDirectionalVector()
@@ -120,13 +125,14 @@ public class PlaneBehaviour : MonoBehaviour
 
     private void RotatePlaneTowardsTarget(Vector3 target)
     {
-        Vector3 direction = Vector3.RotateTowards(this.transform.position, target, 3, 0.0f);
-        if (direction != Vector3.zero)
+        Vector3 directionToTarget = target - this.transform.position;
+        if (directionToTarget.sqrMagnitude > 0.01f) // prevent trying to look at self/origin which results in NaN
         {
-            this.transform.rotation = Quaternion.LookRotation(direction);
-            this.transform.rotation *= Quaternion.Euler(0, 180, 0);
+            Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
+            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, targetRotation, Time.deltaTime * 3.0f);
         }
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -135,14 +141,12 @@ public class PlaneBehaviour : MonoBehaviour
         {
             contact = true;
             TimerRunnig = true;
-            //TimerContact = 10f;
-            //nearByPlanes.Add(otherPlane);
             Tuple<Vector3, float> res = CalculateDodgeDirection(otherPlane);
             if(res.Item2 > currentMaxCrit)
             {
                 currentMaxCrit = res.Item2;
                 AdjustTrajectory(res.Item1);
-                TimerContact = 30f;
+                TimerContact = 10f;
             }
         }
     }
@@ -152,7 +156,6 @@ public class PlaneBehaviour : MonoBehaviour
         PlaneBehaviour otherPlane = other.GetComponent<PlaneBehaviour>();
         if (otherPlane != null)
         {
-            //nearByPlanes.Remove(otherPlane);
             contact = false;
         }
     }
@@ -174,7 +177,7 @@ public class PlaneBehaviour : MonoBehaviour
         alternativeTrajectories = new List<Vector3>(trajectory);
         if (idxTraj + 1 < alternativeTrajectories.Count)
         {
-            alternativeTrajectories[idxTraj + 1] = currentPosition + dodgeDirection * 150f;
+            alternativeTrajectories[idxTraj + 1] = currentPosition + dodgeDirection * 50f;
         }
         speedDirectionnalVector = dodgeDirection.normalized;
     }
