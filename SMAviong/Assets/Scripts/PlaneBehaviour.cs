@@ -21,7 +21,7 @@ public class PlaneBehaviour : MonoBehaviour
     private int idxTraj = 0;
     private bool contact = false;
     public List<Vector3> alternativeTrajectories;
-    public float TimerContact = 10f;
+    public float TimerContact = 30f;
     public bool TimerRunnig = false;
 
     //public List<PlaneBehaviour> nearByPlanes;
@@ -139,17 +139,19 @@ public class PlaneBehaviour : MonoBehaviour
         PlaneBehaviour otherPlane = other.GetComponent<PlaneBehaviour>();
         if (otherPlane != null)
         {
-            contact = true;
-            TimerRunnig = true;
             Tuple<Vector3, float> res = CalculateDodgeDirection(otherPlane);
-            if(res.Item2 > currentMaxCrit)
+           // if(res.Item2 > currentMaxCrit)
             {
                 currentMaxCrit = res.Item2;
-                AdjustTrajectory(res.Item1);
-                TimerContact = 10f;
+                contact = true;
+                TimerRunnig = true;
+                currentMaxCrit = res.Item2;
+                AdjustTrajectory(res.Item1, otherPlane);
+                TimerContact = 30f;
             }
         }
     }
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -162,8 +164,8 @@ public class PlaneBehaviour : MonoBehaviour
 
     private Tuple<Vector3,float> CalculateDodgeDirection(PlaneBehaviour otherPlane)
     {
-        Vector3 dodgeLeft = Quaternion.Euler(0, -90, 0) * speedDirectionnalVector;
-        Vector3 dodgeRight = Quaternion.Euler(0, 90, 0) * speedDirectionnalVector;
+        Vector3 dodgeLeft = Quaternion.Euler(0, -60, 0) * speedDirectionnalVector;
+        Vector3 dodgeRight = Quaternion.Euler(0, 60, 0) * speedDirectionnalVector;
 
         float criticalityLeft = CalculcateCriticalityWithOtherAgent(currentPosition, currentTargetPosition, dodgeLeft, trajectory);
         float criticalityRight = CalculcateCriticalityWithOtherAgent(currentPosition, currentTargetPosition, dodgeRight, trajectory);
@@ -172,16 +174,22 @@ public class PlaneBehaviour : MonoBehaviour
         return new Tuple<Vector3,float> ((criticalityLeft < criticalityRight ? dodgeLeft : dodgeRight), criticalityCoef);
     }
 
-    private void AdjustTrajectory(Vector3 dodgeDirection)
+    private void AdjustTrajectory(Vector3 dodgeDirection, PlaneBehaviour otherPlane)
     {
         alternativeTrajectories = new List<Vector3>(trajectory);
         if (idxTraj + 1 < alternativeTrajectories.Count)
         {
+            setpos( new Vector3(currentPosition.x, currentPosition.y+20f, currentPosition.z));
+            otherPlane.setpos( new Vector3(otherPlane.gameObject.transform.position.x, otherPlane.gameObject.transform.position.y + -20f, otherPlane.gameObject.transform.position.z));
             alternativeTrajectories[idxTraj + 1] = currentPosition + dodgeDirection * 50f;
         }
         speedDirectionnalVector = dodgeDirection.normalized;
     }
 
+    public void setpos(Vector3 newPos)
+    {
+        this.gameObject.transform.position = newPos;
+    }
 
     private float CalculateC3k(Vector3 positionNextStep)
     {

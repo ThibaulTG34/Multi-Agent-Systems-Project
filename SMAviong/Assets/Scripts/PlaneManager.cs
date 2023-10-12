@@ -14,6 +14,7 @@ public class PlaneManager : MonoBehaviour
 
     void Start()
     {
+        y = Random.Range(-5 + 1.2f, 5 + 1.2f);
         float halfSide = sideSize / 2;
         int planesPerSide = nbObjects / 4;
 
@@ -26,12 +27,45 @@ public class PlaneManager : MonoBehaviour
         }
     }
 
+    private List<Vector3> spawnedPlanesPositions = new List<Vector3>();
+
+    private bool IsPointSafe(Vector3 point, float safeDistance)
+    {
+        foreach (Vector3 spawnedPoint in spawnedPlanesPositions)
+        {
+            if (Vector3.Distance(point, spawnedPoint) < safeDistance)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
     void SpawnPlane(float halfSide, bool isXAxis, bool isPositive)
     {
-        float x = isXAxis ? (isPositive ? halfSide : -halfSide) : Random.Range(-halfSide, halfSide);
-        float z = isXAxis ? Random.Range(-halfSide, halfSide) : (isPositive ? halfSide : -halfSide);
+        float x, z;
+        Vector3 spawnPoint;
+        int maxAttempts = 10;  // Définir un maximum d'essais pour éviter une boucle infinie
+        int currentAttempt = 0;
 
-        Vector3 spawnPoint = new Vector3(x, y, z);
+        do
+        {
+            x = isXAxis ? (isPositive ? halfSide : -halfSide) : Random.Range(-halfSide, halfSide);
+            z = isXAxis ? Random.Range(-halfSide, halfSide) : (isPositive ? halfSide : -halfSide);
+            spawnPoint = new Vector3(x, this.y, z);
+            currentAttempt++;
+        }
+        while (!IsPointSafe(spawnPoint, 50f) && currentAttempt < maxAttempts);
+
+        // Si après maxAttempts, nous ne trouvons pas de point sûr, nous annulons le spawn.
+        if (currentAttempt == maxAttempts)
+        {
+            Debug.LogWarning("Couldn't find a safe point to spawn plane.");
+            return;
+        }
+
+
         GameObject plane = Instantiate(prefab, spawnPoint, Quaternion.identity);
 
         // Ensure the spawned plane has LineRenderer and PlaneBehaviour components.s
@@ -44,6 +78,8 @@ public class PlaneManager : MonoBehaviour
         planeBehaviour.trajectory = trajectory;
         lineRenderer.positionCount = trajectory.Count;
         lineRenderer.SetPositions(trajectory.ToArray());
+
+        spawnedPlanesPositions.Add(spawnPoint);
     }
 
     private List<Vector3> GenerateTrajectory(Vector3 startPoint, Vector3 endPoint, int pointsCount)
