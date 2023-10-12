@@ -623,10 +623,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 2954433801269012104, guid: 561448848aea1ab488eab013d2b18a9c, type: 3}
-  nbObjects: 10
-  sideSize: 800
+  nbObjects: 20
+  sideSize: 1000
   y: 1.2
-  nbPointsTrajectory: 30
+  nbPointsTrajectory: 50
 --- !u!1 &1781507029
 GameObject:
   m_ObjectHideFlags: 0

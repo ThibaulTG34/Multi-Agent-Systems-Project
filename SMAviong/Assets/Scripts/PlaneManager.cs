@@ -56,7 +56,7 @@ public class PlaneManager : MonoBehaviour
             spawnPoint = new Vector3(x, this.y, z);
             currentAttempt++;
         }
-        while (!IsPointSafe(spawnPoint, 50f) && currentAttempt < maxAttempts);
+        while (!IsPointSafe(spawnPoint, 40f) && currentAttempt < maxAttempts);
 
         // Si après maxAttempts, nous ne trouvons pas de point sûr, nous annulons le spawn.
         if (currentAttempt == maxAttempts)
