@@ -314,7 +314,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 60, y: 20, z: 60}
+  m_Size: {x: 40, y: 20, z: 40}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2801262373540280142
 Rigidbody:
@@ -356,6 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 2954433801269012104}
+  fx: {fileID: 0}
 --- !u!1 &7902921533535374626
 GameObject:
   m_ObjectHideFlags: 0
